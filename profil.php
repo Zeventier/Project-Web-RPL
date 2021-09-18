@@ -19,7 +19,7 @@ if ($_SESSION['status_login'] != true) {
     <link rel="shortcut icon" href="img/kategori.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width_device-width, initial-scale=1">
-    <title>blablabla</title>
+    <title>Peduli Covid</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
