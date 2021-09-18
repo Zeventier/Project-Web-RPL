@@ -60,13 +60,39 @@
             <!-- Setelah login -->
             <!-- <?php } else { ?> -->
             <!--
-            <a
-                class="btn btn-success"
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
                 href="#"
+                id="navbarDropdown"
                 role="button"
-                style="width: 110px"
-                >Log out</a
-            >
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <?php echo "$_SESSION[login_user]"; ?>
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    style="white-space: nowrap"
+                    href="profil.php"
+                    >Profil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item fw-bold"
+                    style="white-space: nowrap"
+                    href="#"
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </li>
             -->
             <!-- <?php } ?> -->
           </container>
