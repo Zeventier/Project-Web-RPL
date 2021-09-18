@@ -47,7 +47,9 @@
             </li>
           </ul>
           <container class="d-flex">
+            <!-- Sebelum login -->
             <!-- Link untuk ke halaman login -->
+            <!-- <?php if (isset($_SESSION['login_user']) == '') { ?> -->
             <a
               class="btn btn-success"
               href="#"
@@ -55,6 +57,18 @@
               style="width: 110px"
               >Log in</a
             >
+            <!-- Setelah login -->
+            <!-- <?php } else { ?> -->
+            <!--
+                <a
+                class="btn btn-success"
+                href="#"
+                role="button"
+                style="width: 110px"
+                >Log out</a
+              >
+            -->
+            <!-- <?php } ?> -->
           </container>
         </div>
       </div>
@@ -78,10 +92,15 @@
             Lakukan pencegahan Covid-19 mulai dari sekarang demi keselamatan dan
             kesejahteraan bersama.
           </p>
+
+          <!-- Sebelum login -->
           <!-- Link untuk ke halaman daftar -->
+          <!-- <?php if (isset($_SESSION['login_user']) == '') { ?> -->
           <a class="btn btn-lg btn-success" href="#" role="button"
             >DAFTAR SEKARANG</a
           >
+          <!-- Setelah login -->
+          <!-- <?php } else { }?> -->
         </div>
         <!-- konten home untuk layar xl ke bawah -->
         <div class="col container-fluid d-xl-block d-xxl-none text-center">
@@ -112,14 +131,14 @@
         </div>
         <!-- Gambar dokter layar xl -->
         <div class="col container d-xl-block d-xxl-none">
-        <center>
-          <img
-            src="img/Dokter.png"
-            class="d-block img-fluid"
-            alt="gambarDokter"
-            width="800px"
-          />
-        </center>
+          <center>
+            <img
+              src="img/Dokter.png"
+              class="d-block img-fluid"
+              alt="gambarDokter"
+              width="800px"
+            />
+          </center>
         </div>
       </div>
     </div>
