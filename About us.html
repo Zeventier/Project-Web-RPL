@@ -64,7 +64,9 @@ style="background-color: #ecf4f4"
       </li>
     </ul>
     <container class="d-flex">
+      <!-- Sebelum login -->
       <!-- Link untuk ke halaman login -->
+      <!-- <?php if (isset($_SESSION['login_user']) == '') { ?> -->
       <a
         class="btn btn-success"
         href="Login.html"
@@ -72,6 +74,44 @@ style="background-color: #ecf4f4"
         style="width: 110px"
         >Log in</a
       >
+      <!-- Setelah login -->
+      <!-- <?php } else { ?> -->
+      <!--
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <?php echo "$_SESSION[login_user]"; ?>
+        </a>
+        <ul
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a
+              class="dropdown-item fw-bold"
+              style="white-space: nowrap"
+              href="profil.php"
+              >Profil</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item fw-bold"
+              style="white-space: nowrap"
+              href="#"
+              >Log out</a
+            >
+          </li>
+        </ul>
+      </li>
+      -->
+      <!-- <?php } ?> -->
     </container>
   </div>
 </div>
