@@ -39,7 +39,7 @@ if ($_SESSION['status_login'] != true) {
                 <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-auto">
                     <li class="nav-item">
                         <!-- Link untuk ke halaman about -->
-                        <a class="nav-link fw-bold" href="#">About</a>
+                        <a class="nav-link fw-bold" href="About us.html">About</a>
                     </li>
                     <li class="nav-item">
                         <!-- Link untuk ke halaman contact -->
@@ -167,7 +167,7 @@ if ($_SESSION['status_login'] != true) {
     <!-- footer -->
     <footer>
         <div class="container">
-            <small>Copyright &copy; 2021 - IniTiket</small>
+            <small>Copyright &copy; 2021 - Peduli Covid</small>
         </div>
     </footer>
     <!-- Optional JavaScript; choose one of the two! -->
