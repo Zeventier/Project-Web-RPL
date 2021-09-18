@@ -43,7 +43,7 @@ if ($_SESSION['status_login'] != true) {
                     </li>
                     <li class="nav-item">
                         <!-- Link untuk ke halaman contact -->
-                        <a class="nav-link fw-bold" href="Contact.html">Contact</a>
+                        <a class="nav-link fw-bold" href="CONTACT US MAIN .html">Contact</a>
                     </li>
                 </ul>
                 <container class="d-flex">
