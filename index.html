@@ -36,7 +36,7 @@
                 </ul>
                 <container class="d-flex">
                     <!-- Link untuk ke halaman login -->
-                    <a class="btn btn-success" href="#" role="button">Log in</a>
+                    <a class="btn btn-success" href="#" role="button" style="width: 110px;">Log in</a>
                 </container>
             </div>
         </div>
@@ -45,19 +45,33 @@
     <div class="container-fluid py-5 bg-gradient" style="background-color: #8FC2BC;">
         <!-- Text home -->
         <div class="row">
-            <div class="col container-fluid" style="padding: 150px 0 0 70px;">
-                <h1 class="text-start" style="font-size: 60px;">Selamat datang di website Peduli Covid</h1>
-                <p class="text-start" style="font-size: 30px;">Lakukan pencegahan Covid-19 mulai dari sekarang demi
+            <div class="col container-fluid d-none d-xxl-block" style="padding: 100px 0 0 50px;">
+                <h1 class="display-2 text-start"><b>Selamat datang di website Peduli Covid</b></h1>
+                <p class="display-5 text-start">Lakukan pencegahan Covid-19 mulai dari sekarang demi
                     keselamatan dan kesejahteraan bersama.</p>
-                <!-- Link untuk ke halaman about -->
+                <!-- Link untuk ke halaman daftar -->
                 <a class="btn btn-lg btn-success" href="#" role="button">DAFTAR SEKARANG</a>
             </div>
+            <div class="col container-fluid d-xl-block d-xxl-none text-center">
+                <center>
+                <h1 class="display-2"><b>Selamat datang di website Peduli Covid</b></h1>
+                <p class="display-5">Lakukan pencegahan Covid-19 mulai dari sekarang demi
+                    keselamatan dan kesejahteraan bersama.</p>
+                <!-- Link untuk ke halaman daftar -->
+                <a class="btn btn-lg btn-success" href="#" role="button">DAFTAR SEKARANG</a>
+            </center>
+            </div>
+
+            <div class="w-100 d-xl-block d-xxl-none"></div>
+            <div class="col container d-none d-xxl-block">
+                <img src="img/Dokter.png" class="d-block" alt="gambarDokter" width="800px">
+            </div>
             <!-- Gambar dokter -->
-            <div class="col container-fluid">
-                <img src="Dokter.png" class="img-fluid float-end" alt="gambarDokter" width="1000px">
+            <div class="col container d-xl-block d-xxl-none">
+                <img src="img/Dokter.png" class="d-block img-fluid" alt="gambarDokter">
             </div>
         </div>
-     
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
