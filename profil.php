@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'koneksi.php';
-if ($_SESSION['status_login'] != true) {
+if ($_SESSION['user'] == '') {
     echo '<script>window.location="login.php"</script>';
 }
 ?>

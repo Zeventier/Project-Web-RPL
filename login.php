@@ -65,6 +65,4 @@ if (isset($_POST['login'])) {
     header('location: login.php');
   }
 }
-
-
 ?>
