@@ -15,9 +15,9 @@
     <h2>Log In</h2>
     <form action="" method="POST">
       <fieldset>
-        <label for="email">E-mail/Username</label>
+        <label for="username">Username</label>
         <p>
-          <input type="email" name="email" placeholder="E-mail/Username" />
+          <input type="username" name="username" placeholder="Username" />
         </p>
         <label for="password">Password</label>
         <p>
@@ -37,31 +37,32 @@
 
 <?php
 if (isset($_POST['login'])) {
+  session_start();
   include "koneksi.php";
   //Process for login
   // 1. Get the data from login form
   $username = $_POST['username'];
-  $password = md5($_POST['password']);
+  $password = $_POST['password'];
 
   // 2. SQL to check whether the user with username exixts or not
-  $cek_user = mysqli_query($conn, "SELECT * FROM pedulicovid WHERE username='$username'AND password='$password'");
+  $cek_user = mysqli_query($conn, "SELECT * FROM akun WHERE username='$username' AND password='$password'");
 
   // 3. Count rows to check whether the user exists or not
   $row = mysqli_num_rows($cek_user);
 
-  if ($row === 1) {
+  if ($row == 1) {
     //User avaliable and login success
     $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
     $_SESSION['user'] = $username; //to check whether the user is logged in or not and logout will unset it
 
     //Redirect to home page/ Dashboard
-    header('location: ../index.php');
+    header('location: index.php');
   } else {
     // User not avaliable and login fail
     //User avaliable and login success
     $_SESSION['login'] = "<div class='error'>Username or Password did not match.</div>";
     //Redirect to home page/ Dashboard
-    header('location:../login.php');
+    header('location: login.php');
   }
 }
 
