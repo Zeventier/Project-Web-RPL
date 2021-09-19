@@ -17,7 +17,7 @@ $result = mysqli_query($con, $s);
 $num = mysqli_num_rows($result);
 
 if ($num == 1){
-    echo "<script>alert('Username already taken.');window.location='formregisterclone.php'</script>";
+    echo "<script>alert('Username already taken.');window.location='formregister.html'</script>";
 }
 else{
     $reg = " INSERT INTO akun (nama_lengkap, username, alamat_email, password, nomor_telpon) VALUES ('$fullname', '$username', '$email', '$password', '$telp')";
