@@ -36,34 +36,27 @@
 </html>
 
 <?php
-if (isset($_POST['login'])) {
-  include "koneksi.php";
-  //Process for login
-  // 1. Get the data from login form
-  $username = $_POST['username'];
-  $password = md5($_POST['password']);
+  if (isset($_POST['submit'])) {
+    session_start();
+    include 'koneksi.php';
 
-  // 2. SQL to check whether the user with username exixts or not
-  $cek_user = mysqli_query($conn, "SELECT * FROM pedulicovid WHERE username='$username'AND password='$password'");
+    $user = mysqli_real_escape_string($conn, $_POST['user']);
+    $pass = mysqli_real_escape_string($conn, $_POST['pass']);
 
-  // 3. Count rows to check whether the user exists or not
-  $row = mysqli_num_rows($cek_user);
+    $cek_user = mysqli_query($conn, "SELECT * FROM tb_admin WHERE username = '" . $user . "' AND password = '" . MD5($pass) . "'");
+    $row = mysqli_num_rows($cek_user); 
 
-  if ($row === 1) {
-    //User avaliable and login success
-    $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
-    $_SESSION['user'] = $username; //to check whether the user is logged in or not and logout will unset it
-
-    //Redirect to home page/ Dashboard
-    header('location: ../index.php');
-  } else {
-    // User not avaliable and login fail
-    //User avaliable and login success
-    $_SESSION['login'] = "<div class='error'>Username or Password did not match.</div>";
-    //Redirect to home page/ Dashboard
-    header('location:../login.php');
+    if($row === 1 ){
+      $fetch_pass = mysqli_fetch_assoc($cek_user);
+      $cek_pass = $fetch_pass['password'];
+      if($cek_pass <> $pass ){
+        echo '<script>alert("Password Salah");</script>';
+      }else{
+        $_SESSION['log'] = true;
+        echo '<script>alert("Password Salah");window.location="index.php"</script>';
+      } 
+    } else {
+      echo '<script>alert("Username salah atau belum terdaftar");</script>';
+    }
   }
-}
-
-
 ?>
