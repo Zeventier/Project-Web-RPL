@@ -65,7 +65,7 @@ if ($_SESSION['status_login'] != true) {
             <h3>Profile</h3>
             <div class="box">
                 <div class="btn btn-success" style="margin-bottom:1rem;">
-                    <a href="koneksi.php" style="color:#ffff; ">Edit Profile</a>
+                    <a href="update.php" style="color:#ffff; ">Edit Profile</a>
                 </div>
                 <div class="container" style="background-color: #ffff;">
                     <table border="0" class="table" style="border-radius: 10px; border: 10px solid transparent">
