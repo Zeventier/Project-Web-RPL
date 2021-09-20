@@ -20,7 +20,7 @@ include 'koneksi.php';
   .bgimg {
     background-position: center;
     background-size: cover;
-    background-image: url("/img/bgimg.jpg");
+    background-image: url("img/bgimg.jpg");
     min-height: 75%;
   }
 
@@ -108,7 +108,7 @@ include 'koneksi.php';
         <div class="w3-panel w3-leftbar w3-light-grey">
           <p><i>"Mencegah lebih baik daripada mengobati."</i></p>
         </div>
-        <img src="/img/smol.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+        <img src="img/smol.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
         <p><strong>Jam buka:</strong> Setiap hari 24 jam.</p>
         <p><strong>Alamat:</strong> Jl. Biduri 3 No. 81 Rt.17 Komp. Bataman Indah Kel. Belimbing Raya Kec. Murung Pudak
           Kab. Tabalong Kode Pos 71571</p>
