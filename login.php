@@ -1,3 +1,11 @@
+<?php
+session_start();
+include 'koneksi.php';
+if (isset($_SESSION['user']) != '') {
+  echo '<script>window.location="index.php"</script>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 

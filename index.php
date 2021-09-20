@@ -79,7 +79,7 @@ include 'koneksi.php';
         <!-- Sebelum login -->
         <!-- Link untuk ke halaman daftar -->
         <?php if (isset($_SESSION['user']) == '') { ?>
-          <a class="btn btn-lg btn-success" href="formregister.html" role="button">DAFTAR SEKARANG</a>
+          <a class="btn btn-lg btn-success" href="formregister.php" role="button">DAFTAR SEKARANG</a>
           <!-- Setelah login -->
         <?php } else {
         } ?>
@@ -96,7 +96,7 @@ include 'koneksi.php';
           </p>
           <!-- Link untuk ke halaman daftar -->
           <?php if (isset($_SESSION['user']) == '') { ?>
-            <a class="btn btn-lg btn-success" href="formregister.html" role="button">DAFTAR SEKARANG</a>
+            <a class="btn btn-lg btn-success" href="formregister.php" role="button">DAFTAR SEKARANG</a>
             <!-- Setelah login -->
           <?php } else {
           } ?>
