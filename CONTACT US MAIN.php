@@ -1,3 +1,11 @@
+<?php
+session_start();
+include 'koneksi.php';
+if ($_SESSION['user'] == '') {
+  echo '<script>window.location="login.php"</script>';
+}
+$user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html>
 <!----------------------------------------buat NAVBAR--------------------------------------------------------------------------->
@@ -16,7 +24,7 @@
       <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-auto">
         <li class="nav-item">
           <!-- Link untuk ke halaman about -->
-          <a class="nav-link fw-bold" href="About us.html">About</a>
+          <a class="nav-link fw-bold" href="About us.php">About</a>
         </li>
         <li class="nav-item">
           <!-- Link untuk ke halaman contact -->
