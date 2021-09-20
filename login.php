@@ -17,7 +17,7 @@
       <fieldset>
         <label for="username">Username</label>
         <p>
-          <input type="email" name="username" placeholder="Username" />
+          <input type="username" name="username" placeholder="Username" />
         </p>
         <label for="password">Password</label>
         <p>
