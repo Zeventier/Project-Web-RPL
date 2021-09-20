@@ -33,7 +33,7 @@ if (isset($_SESSION['user']) != '') {
         </p>
         <p><input type="submit" name="login" value="Log In" /></p>
         <div class="login-help">
-          <label>Tidak punya akun? </label> <a href="formregister.html">Register Sekarang</a>
+          <label>Tidak punya akun? </label> <a href="formregister.php">Register Sekarang</a>
         </div>
       </fieldset>
     </form>
