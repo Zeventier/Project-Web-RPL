@@ -6,9 +6,10 @@ if (isset($_POST['update'])) {
     $identitas = $_POST['Identitas'];
     $nama_lengkap = $_POST['NamaLengkap'];
     $tanggal_lahir = $_POST['TanggalLahir'];
+    $nomor_telpon = $_POST['NomorTelepon'];
     $email = $_POST['Email'];
 
-    $sql = "UPDATE akun SET identitas_akun='$identitas', nama_lengkap='$nama_lengkap', tanggal_lahir='$tanggal_lahir', alamat_email='$email' WHERE username='$username' ";
+    $sql = "UPDATE akun SET identitas_akun='$identitas', nama_lengkap='$nama_lengkap', tanggal_lahir='$tanggal_lahir',nomor_telpon='$nomor_telpon', alamat_email='$email' WHERE username='$username' ";
 
     if ($conn->query($sql) == TRUE) {
         echo "<script>alert('data berhasil diupdate.');window.location='profil.php'</script>";
@@ -47,6 +48,7 @@ if (isset($_POST['update'])) {
             <input type="text" name="Identitas" placeholder="Ganti Identitas" /><br />
             <input type="text" name="NamaLengkap" placeholder="Ganti Nama Lengkap" /><br />
             <input type="date" name="TanggalLahir" placeholder="Ganti Tanggal Lahir" /><br />
+            <input type="text" name="NomorTelepon" placeholder="Ganti Nomor Telepon"/><br/>
             <input type="text" name="Email" placeholder="Ganti Email" /><br />
 
             <input type="Submit" name="update" value="Apply" />
