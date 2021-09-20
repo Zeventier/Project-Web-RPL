@@ -25,10 +25,11 @@ if ($_SESSION['user'] == '') {
 
 <body>
     <!--header -->
+    <!-- Code untuk Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light px-5" style="background-color: #ecf4f4">
         <div class="container-fluid">
             <!-- brand -->
-            <a class="navbar-brand fw-bold" href="#">Peduli Covid</a>
+            <a class="navbar-brand fw-bold" href="index.php">Peduli Covid</a>
             <!-- Button agar responsive -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,15 +43,30 @@ if ($_SESSION['user'] == '') {
                     </li>
                     <li class="nav-item">
                         <!-- Link untuk ke halaman contact -->
-                        <a class="nav-link fw-bold" href="CONTACT US MAIN .html">Contact</a>
+                        <a class="nav-link fw-bold" href="CONTACT US MAIN.html">Contact</a>
                     </li>
+                    <container class="d-flex">
+                        <!-- Sebelum login -->
+                        <!-- Link untuk ke halaman login -->
+                        <?php if (isset($_SESSION['user']) == '') { ?>
+                            <a class="btn btn-success" href="Login.php" role="button" style="width: 110px">Log in</a>
+                            <!-- Setelah login -->
+                        <?php } else { ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link fw-bold dropdown-toggle link-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php echo "$_SESSION[user]"; ?>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item fw-bold" style="white-space: nowrap" href="profil.php">Profil</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item fw-bold" style="white-space: nowrap" href="logout.php">Log out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php } ?>
                 </ul>
-                <container class="d-flex">
-                    <!-- Sebelum login -->
-                    <!-- Link untuk ke halaman login -->
-                    <a class="btn btn-success" href="logout.php" role="button" style="width: 110px">Log out</a>
-                    <!-- Setelah login -->
-
                 </container>
             </div>
         </div>
@@ -59,7 +75,7 @@ if ($_SESSION['user'] == '') {
     <div class="section" style="background-color: #ecf4f4; padding-top: 1.5rem;">
         <section class="jumbotron text-center">
             <img src="https://freepikpsd.com/media/2019/10/follower-png-6.png" alt="profile" width="150" class="rounded-circle img-thumbnail">
-            <h1 class=" display-4"><?php echo $_SESSION['user'] = $username ?></h1>
+            <h1 class=" display-4"><?php echo $_SESSION['user'] ?></h1>
         </section>
         <div class="container">
             <h3>Profile</h3>
@@ -73,7 +89,7 @@ if ($_SESSION['user'] == '') {
                             <td><b>Identitas</td>
                         </tr>
                         <?php
-                        $identitas_akun = mysqli_query($conn, "SELECT * FROM akun where identitas_akun = username");
+                        $identitas_akun = mysqli_query($conn, "SELECT * FROM akun");
                         if (mysqli_num_rows($identitas_akun) > 0) {
                             while ($row = mysqli_fetch_array($identitas_akun)) {
                         ?>
@@ -90,7 +106,7 @@ if ($_SESSION['user'] == '') {
                             <td><b>Nama</td>
                         </tr>
                         <?php
-                        $nama_lengkap = mysqli_query($conn, "SELECT * FROM akun where nama_lengkap = username");
+                        $nama_lengkap = mysqli_query($conn, "SELECT * FROM akun");
                         if (mysqli_num_rows($nama_lengkap) > 0) {
                             while ($row = mysqli_fetch_array($nama_lengkap)) {
                         ?>
@@ -108,7 +124,7 @@ if ($_SESSION['user'] == '') {
                         </tr>
                         <?php
                         $no = 1;
-                        $tanggal_lahir = mysqli_query($conn, "SELECT * FROM akun where tanggal_lahir = username");
+                        $tanggal_lahir = mysqli_query($conn, "SELECT * FROM akun");
                         if (mysqli_num_rows($tanggal_lahir) > 0) {
                             while ($row = mysqli_fetch_array($tanggal_lahir)) {
                         ?>
@@ -126,7 +142,7 @@ if ($_SESSION['user'] == '') {
                         </tr>
                         <?php
                         $no = 1;
-                        $alamat_email = mysqli_query($conn, "SELECT * FROM akun where alamat_email = username");
+                        $alamat_email = mysqli_query($conn, "SELECT * FROM akun");
                         if (mysqli_num_rows($alamat_email) > 0) {
                             while ($row = mysqli_fetch_array($alamat_email)) {
                         ?>
@@ -144,7 +160,7 @@ if ($_SESSION['user'] == '') {
                         </tr>
                         <?php
                         $no = 1;
-                        $nomor_telpon = mysqli_query($conn, "SELECT * FROM akun where nomor_telpon = username");
+                        $nomor_telpon = mysqli_query($conn, "SELECT * FROM akun");
                         if (mysqli_num_rows($nomor_telpon) > 0) {
                             while ($row = mysqli_fetch_array($nomor_telpon)) {
                         ?>
