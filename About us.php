@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'koneksi.php';
-$user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html>
