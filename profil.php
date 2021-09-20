@@ -45,7 +45,6 @@ if ($_SESSION['user'] == '') {
                         <!-- Link untuk ke halaman contact -->
                         <a class="nav-link fw-bold" href="CONTACT US MAIN.html">Contact</a>
                     </li>
-
                     <container class="d-flex">
                         <!-- Sebelum login -->
                         <!-- Link untuk ke halaman login -->
