@@ -15,7 +15,6 @@ include 'koneksi.php';
   body,
   html {
     height: 100%;
-    font-family: "Inconsolata", sans-serif;
   }
 
   .bgimg {
