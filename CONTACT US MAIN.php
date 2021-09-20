@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <!----------------------------------------buat NAVBAR--------------------------------------------------------------------------->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 <!-- Code untuk Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light px-5" style="background-color: #ecf4f4">
   <div class="container-fluid">
     <!-- brand -->
     <a class="navbar-brand fw-bold" href="index.php">Peduli Covid</a>
     <!-- Button agar responsive -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Isi Navbar -->
@@ -24,10 +22,29 @@
           <!-- Link untuk ke halaman contact -->
           <a class="nav-link fw-bold" href="CONTACT US MAIN.html">Contact</a>
         </li>
+
+        <container class="d-flex">
+          <!-- Sebelum login -->
+          <!-- Link untuk ke halaman login -->
+          <?php if (isset($_SESSION['user']) == '') { ?>
+            <a class="btn btn-success" href="Login.php" role="button" style="width: 110px">Log in</a>
+            <!-- Setelah login -->
+          <?php } else { ?>
+            <li class="nav-item dropdown">
+              <a class="nav-link fw-bold dropdown-toggle link-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo "$_SESSION[user]"; ?>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item fw-bold" style="white-space: nowrap" href="profil.php">Profil</a>
+                </li>
+                <li>
+                  <a class="dropdown-item fw-bold" style="white-space: nowrap" href="logout.php">Log out</a>
+                </li>
+              </ul>
+            </li>
+          <?php } ?>
       </ul>
-      <container class="d-flex">
-        <!-- Link untuk ke halaman login -->
-        <a class="btn btn-success" href="#" role="button" style="width: 110px">Log in</a>
       </container>
     </div>
   </div>
