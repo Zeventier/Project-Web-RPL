@@ -32,7 +32,7 @@
             <br>
             <button type="submit" class="btn btn-primary tombol" name="register">Sign Up</button>
             <p> Sudah punya akun?
-                <a href="login.html">Login di sini</a>
+                <a href="login.php">Login di sini</a>
             </p>
         </form>
     </div>
