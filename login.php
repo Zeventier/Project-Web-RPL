@@ -13,7 +13,7 @@ if (isset($_SESSION['user']) != '') {
   <link rel="shortcut icon" href="img/Dokter.png" />
   <meta name="viewport" content="width_device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <title>Log in | Peduli Covid</title>
+  <title>Login | Peduli Covid</title>
   <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="loginstyle.css" />
 </head>
