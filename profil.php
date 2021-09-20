@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'koneksi.php';
-if ($_SESSION['user'] == '') {
+if (isset($_SESSION['user']) == '') {
     echo '<script>window.location="login.php"</script>';
 }
 $user = $_SESSION['user'];
