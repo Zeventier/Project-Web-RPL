@@ -4,6 +4,7 @@ include 'koneksi.php';
 if ($_SESSION['user'] == '') {
     echo '<script>window.location="login.php"</script>';
 }
+$user = $_SESSION['user'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -45,6 +46,7 @@ if ($_SESSION['user'] == '') {
                         <!-- Link untuk ke halaman contact -->
                         <a class="nav-link fw-bold" href="CONTACT US MAIN.html">Contact</a>
                     </li>
+
                     <container class="d-flex">
                         <!-- Sebelum login -->
                         <!-- Link untuk ke halaman login -->
@@ -89,7 +91,7 @@ if ($_SESSION['user'] == '') {
                             <td><b>Identitas</td>
                         </tr>
                         <?php
-                        $identitas_akun = mysqli_query($conn, "SELECT * FROM akun");
+                        $identitas_akun = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$user'");
                         if (mysqli_num_rows($identitas_akun) > 0) {
                             while ($row = mysqli_fetch_array($identitas_akun)) {
                         ?>
@@ -106,7 +108,7 @@ if ($_SESSION['user'] == '') {
                             <td><b>Nama</td>
                         </tr>
                         <?php
-                        $nama_lengkap = mysqli_query($conn, "SELECT * FROM akun");
+                        $nama_lengkap = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$user'");
                         if (mysqli_num_rows($nama_lengkap) > 0) {
                             while ($row = mysqli_fetch_array($nama_lengkap)) {
                         ?>
@@ -124,7 +126,7 @@ if ($_SESSION['user'] == '') {
                         </tr>
                         <?php
                         $no = 1;
-                        $tanggal_lahir = mysqli_query($conn, "SELECT * FROM akun");
+                        $tanggal_lahir = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$user'");
                         if (mysqli_num_rows($tanggal_lahir) > 0) {
                             while ($row = mysqli_fetch_array($tanggal_lahir)) {
                         ?>
@@ -142,7 +144,7 @@ if ($_SESSION['user'] == '') {
                         </tr>
                         <?php
                         $no = 1;
-                        $alamat_email = mysqli_query($conn, "SELECT * FROM akun");
+                        $alamat_email = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$user'");
                         if (mysqli_num_rows($alamat_email) > 0) {
                             while ($row = mysqli_fetch_array($alamat_email)) {
                         ?>
@@ -160,7 +162,7 @@ if ($_SESSION['user'] == '') {
                         </tr>
                         <?php
                         $no = 1;
-                        $nomor_telpon = mysqli_query($conn, "SELECT * FROM akun");
+                        $nomor_telpon = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$user'");
                         if (mysqli_num_rows($nomor_telpon) > 0) {
                             while ($row = mysqli_fetch_array($nomor_telpon)) {
                         ?>
