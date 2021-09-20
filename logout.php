@@ -1,12 +1,4 @@
 <?php
-
-    session_start();
-    $_SESSION = [];
-    session_unset();
-    //Destroy the session
-    session_destroy(); //unset $_SESSION['user']
-    
-    //Redirect to login page
-    header('location: ../login.php');
-
-?>
+	session_start();
+	session_destroy();
+	echo'<script>window.location="index.php"</script>';
