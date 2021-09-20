@@ -48,7 +48,7 @@ if ($_SESSION['user'] == '') {
                 <container class="d-flex">
                     <!-- Sebelum login -->
                     <!-- Link untuk ke halaman login -->
-                    <a class="btn btn-success" href="#" role="button" style="width: 110px">Log out</a>
+                    <a class="btn btn-success" href="logout.php" role="button" style="width: 110px">Log out</a>
                     <!-- Setelah login -->
 
                 </container>
@@ -59,7 +59,7 @@ if ($_SESSION['user'] == '') {
     <div class="section" style="background-color: #ecf4f4; padding-top: 1.5rem;">
         <section class="jumbotron text-center">
             <img src="https://freepikpsd.com/media/2019/10/follower-png-6.png" alt="profile" width="150" class="rounded-circle img-thumbnail">
-            <h1 class=" display-4"><?php echo $_SESSION['a_global']->username ?></h1>
+            <h1 class=" display-4"><?php echo $_SESSION['user'] = $username ?></h1>
         </section>
         <div class="container">
             <h3>Profile</h3>
